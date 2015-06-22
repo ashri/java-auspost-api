@@ -8,7 +8,6 @@ import org.tearsofaunicorn.auspost.domestic.postcode.search.model.Locality;
 import org.tearsofaunicorn.auspost.domestic.postcode.search.model.SearchResponse;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -39,11 +38,8 @@ public class PostcodeSearchClientTest {
         Assert.assertNotNull(localities);
         Assert.assertThat(localities.size(), equalTo(2));
 
-        Locality locality = localities.get(0);
-        Assert.assertThat(locality.getCategory(), equalTo("COTTESLOE"));
-
-        locality = localities.get(1);
-        Assert.assertThat(locality.getCategory(), equalTo("PEPPERMINT GROVE"));
+        Assert.assertTrue(localities.stream().anyMatch(l -> l.getLocation().equals("COTTESLOE")));
+        Assert.assertTrue(localities.stream().anyMatch(l -> l.getLocation().equals("PEPPERMINT GROVE")));
     }
 
     @Test
@@ -51,18 +47,15 @@ public class PostcodeSearchClientTest {
         String q = "Armadale";
 
         SearchResponse response = client.prepareSearch(q)
-                .excludePostBoxes(true)
                 .executeGet();
 
         Assert.assertNotNull(response);
         List<Locality> localities = response.getLocalities();
         Assert.assertNotNull(localities);
-        Assert.assertThat(localities.size(), equalTo(2));
+        Assert.assertThat(localities.size(), equalTo(4));
 
-        Stream<Locality> stream = localities.stream();
-
-        Assert.assertTrue(stream.anyMatch(l -> l.getState() == AustralianState.VIC));
-        Assert.assertTrue(stream.anyMatch(l -> l.getState() == AustralianState.WA));
+        Assert.assertTrue(localities.stream().anyMatch(l -> l.getState() == AustralianState.VIC));
+        Assert.assertTrue(localities.stream().anyMatch(l -> l.getState() == AustralianState.WA));
     }
 
     @Test

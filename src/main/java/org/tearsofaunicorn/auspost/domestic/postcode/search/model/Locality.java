@@ -1,31 +1,34 @@
 package org.tearsofaunicorn.auspost.domestic.postcode.search.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  * A single post code locality
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Locality {
 
-    @JsonProperty
+    @XmlElement
     private String category;
 
-    @JsonProperty
+    @XmlElement
     private Integer id;
 
-    @JsonProperty
+    @XmlElement
     private String location;
 
-    @JsonProperty
-    private Integer postCode;
+    @XmlElement
+    private Integer postcode;
 
-    @JsonProperty
+    @XmlElement
     private AustralianState state;
 
-    @JsonProperty
+    @XmlElement
     private Float latitude;
 
-    @JsonProperty
+    @XmlElement
     private Float longitude;
 
     public String getCategory() {
@@ -52,12 +55,12 @@ public class Locality {
         this.location = location;
     }
 
-    public Integer getPostCode() {
-        return postCode;
+    public Integer getPostcode() {
+        return postcode;
     }
 
-    public void setPostCode(Integer postCode) {
-        this.postCode = postCode;
+    public void setPostcode(Integer postcode) {
+        this.postcode = postcode;
     }
 
     public AustralianState getState() {

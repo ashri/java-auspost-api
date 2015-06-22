@@ -7,7 +7,7 @@ import org.tearsofaunicorn.auspost.domestic.postcode.search.model.SearchRequest;
  */
 public class PostcodeSearchClient {
 
-    public static final String DEFAULT_ENDPOINT = "https://auspost.com.au/api/postcode/search";
+    public static final String DEFAULT_ENDPOINT = "https://auspost.com.au/api/postcode/search.xml";
     private final String apiKey;
     private String endpoint;
 
@@ -22,7 +22,7 @@ public class PostcodeSearchClient {
     }
 
     public SearchRequest prepareSearch(String query) {
-        return new SearchRequest(apiKey, endpoint);
+        return new SearchRequest(apiKey, endpoint).query(query);
     }
 
 }
