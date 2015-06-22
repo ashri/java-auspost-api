@@ -1,35 +1,26 @@
 package org.tearsofaunicorn.auspost.domestic.postcode.search.model;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-/**
- * _TODO:_ Write summary
- */
 public class SearchRequestTest {
 
     @Test
     public void testQuery() throws Exception {
-        Assert.fail("Implement test");
-
+        String request = new SearchRequest("apiKey", "http://test.com").query("query").buildUrl();
+        Assert.assertTrue(request.contains("q=query"));
     }
 
     @Test
     public void testSetState() throws Exception {
-        Assert.fail("Implement test");
-
+        String request = new SearchRequest("apiKey", "http://test.com").setState(AustralianState.WA).buildUrl();
+        Assert.assertTrue(request.contains("state=WA"));
     }
 
     @Test
     public void testExcludePostBoxes() throws Exception {
-        Assert.fail("Implement test");
-
+        String request = new SearchRequest("apiKey", "http://test.com").excludePostBoxes(true).buildUrl();
+        Assert.assertTrue(request.contains("excludePostBoxFlag=true"));
     }
 
-    @Test
-    public void testBuildUrl() throws Exception {
-        Assert.fail("Implement test");
-
-    }
 }
