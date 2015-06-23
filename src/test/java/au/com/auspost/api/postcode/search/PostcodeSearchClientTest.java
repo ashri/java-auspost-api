@@ -1,16 +1,18 @@
-package org.tearsofaunicorn.auspost.domestic.postcode.search;
+package au.com.auspost.api.postcode.search;
 
+import au.com.auspost.api.postcode.search.model.AustralianState;
+import au.com.auspost.api.postcode.search.model.Locality;
+import au.com.auspost.api.postcode.search.model.SearchResponse;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
-import org.tearsofaunicorn.auspost.domestic.postcode.search.model.AustralianState;
-import org.tearsofaunicorn.auspost.domestic.postcode.search.model.Locality;
-import org.tearsofaunicorn.auspost.domestic.postcode.search.model.SearchResponse;
 
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
+@Ignore
 public class PostcodeSearchClientTest {
 
     private PostcodeSearchClient client;

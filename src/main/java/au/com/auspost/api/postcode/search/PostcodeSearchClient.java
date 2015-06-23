@@ -1,6 +1,7 @@
-package org.tearsofaunicorn.auspost.domestic.postcode.search;
+package au.com.auspost.api.postcode.search;
 
-import org.tearsofaunicorn.auspost.domestic.postcode.search.model.SearchRequest;
+
+import au.com.auspost.api.postcode.search.model.SearchRequest;
 
 /**
  * Client to search for Postcode information with Australia Post

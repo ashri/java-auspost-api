@@ -1,4 +1,4 @@
-package org.tearsofaunicorn.auspost.domestic.postcode.search.model;
+package au.com.auspost.api.postcode.search.model;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package org.tearsofaunicorn.auspost.domestic.postcode.search.model;
+package au.com.auspost.api.postcode.search.model;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -12,7 +12,7 @@ import java.io.StringReader;
 
 public class SearchRequest {
 
-    private static final Logger LOG = LoggerFactory.getLogger("auspost.domestic.postcode.search");
+    private static final Logger LOG = LoggerFactory.getLogger(SearchRequest.class);
 
     private final String apiKey;
     private final String endpoint;
