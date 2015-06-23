@@ -3,21 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.tearsofaunicorn.auspost</groupId>
-    <artifactId>domestic-postcode-search</artifactId>
+    <groupId>com.threeheadedmonkey.auspost</groupId>
+    <artifactId>postcode-search</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Australia Post Domestic Postcode Search</name>
-    <url>https://code.tearsofaunicorn.org/auspost</url>
+    <name>Australia Post Postcode Search</name>
+    <url>https://github.com/ashri/auspost-postcode-search</url>
     <description>A library to perform domestic post code searches with Australia Post using their API.</description>
     <inceptionYear>2015</inceptionYear>
 
     <dependencies>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.3.1</version>
-        </dependency>
         <dependency>
             <groupId>com.squareup.okhttp</groupId>
             <artifactId>okhttp</artifactId>
