@@ -5,7 +5,7 @@
 
     <groupId>com.threeheadedmonkey.auspost</groupId>
     <artifactId>postcode-search</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
 
     <name>Australia Post Postcode Search</name>
     <url>https://github.com/ashri/auspost-postcode-search</url>
