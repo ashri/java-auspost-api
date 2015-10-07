@@ -83,7 +83,9 @@ public class SearchRequest {
     protected String buildUrl() {
         StringBuilder url = new StringBuilder(endpoint);
         url.append("?q=");
-        url.append(query);
+        if(query!=null) {
+            url.append(query.trim().replaceAll("\\s+", "+"));
+        }
         if (state != null) {
             url.append("&state=");
             url.append(state.name());

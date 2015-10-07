@@ -12,6 +12,12 @@ public class SearchRequestTest {
     }
 
     @Test
+    public void testQuerySpace() throws Exception {
+        String request = new SearchRequest("apiKey", "http://test.com").query(" east perth ").buildUrl();
+        Assert.assertTrue(request.contains("q=east+perth"));
+    }
+
+    @Test
     public void testSetState() throws Exception {
         String request = new SearchRequest("apiKey", "http://test.com").setState(AustralianState.WA).buildUrl();
         Assert.assertTrue(request.contains("state=WA"));
