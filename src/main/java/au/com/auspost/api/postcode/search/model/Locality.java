@@ -20,7 +20,7 @@ public class Locality {
     private String location;
 
     @XmlElement
-    private Integer postcode;
+    private String postcode;
 
     @XmlElement
     private AustralianState state;
@@ -55,11 +55,11 @@ public class Locality {
         this.location = location;
     }
 
-    public Integer getPostcode() {
+    public String getPostcode() {
         return postcode;
     }
 
-    public void setPostcode(Integer postcode) {
+    public void setPostcode(String postcode) {
         this.postcode = postcode;
     }
 
